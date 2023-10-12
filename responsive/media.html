@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Truy vấn media CSS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            /* Áp dụng cho tất cả trừ khi được ghi đè */
+            * {margin: 0;}
+            body {background: rgba(255, 0, 0, 0.25);}
+            header {background: rgba(0,0,0,0.25); margin-bottom: 10px; height: 50px;}
+            section {background: rgba(0,0,0,0.25); margin-bottom: 10px; height: 1000px;}
+            aside {background: rgba(0,0,0,0.25); margin-bottom: 10px; height: 1000px; display: none;}
+            footer {background: rgba(0,0,0,0.25); height: 50px;}
+
+            /* Áp dụng cho các thiết bị có chiều rộng 758px hoặc hơn */
+            @media screen and (min-width:768px) {
+                body {background: rgba(0,255,0,0.25);}
+                aside {display: block;}
+            }
+
+            /* Áp dụng cho các thiết bị có chiều rộng 1200px hoặc hơn */
+            @media screen and (min-width:1200px) {
+                body {background: rgba(0,0,255,0.25);}
+                section {float: left; width: 69%; margin-right: 10px;}
+                aside {float: right; width: 30%;}
+                footer {clear:both;}
+            }
+        </style>
+    </head>
+    <body>
+        <header>Header</header>
+        <section>Section</section>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+    </body>
+</html>
